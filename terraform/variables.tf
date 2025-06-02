@@ -7,5 +7,5 @@ variable "cluster_name" {
 }
 
 variable "labrole_arn" {
-  default = "arn:aws:iam::888954751995:role/LabRole"
+  default = "arn:aws:iam::807023255505:role/LabRole"
 }
