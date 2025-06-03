@@ -96,3 +96,16 @@ resource "aws_eks_node_group" "default" {
 
   depends_on = [aws_eks_cluster.this]
 }
+
+resource "aws_ecr_repository" "postech_api" {
+  name                 = "postech-api"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = {
+    Name = "postech-api"
+  }
+}
